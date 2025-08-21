@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 SmartPay - Gasless Payroll for Web3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h2>🚀 Web3 SmartPay</h2>
+            </div>
+            <div class="nav-menu">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <button class="btn btn--outline btn--sm theme-toggle">🌙</button>
+                <button class="btn btn--primary connect-wallet-btn">Connect Wallet</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Landing Page -->
+    <main class="landing-page">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Revolutionize Web3 Payroll with Gasless, Real-time Payments</h1>
+                    <p class="hero-subtitle">Stream payments by the second with zero gas fees. Perfect for DAOs, startups, and freelancers who want instant, transparent compensation.</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">99.8%</span>
+                            <span class="stat-label">Gas Savings</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">TPS</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">&lt;1s</span>
+                            <span class="stat-label">Settlement</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg start-as-dao">Start as DAO</button>
+                        <button class="btn btn--outline btn--lg start-as-contributor">Join as Contributor</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="streaming-demo">
+                        <div class="payment-flow">
+                            <div class="flow-node sender">DAO Treasury</div>
+                            <div class="flow-stream"></div>
+                            <div class="flow-node receiver">Contributors</div>
+                        </div>
+                        <div class="real-time-counter">
+                            <span class="counter-label">Live Earnings:</span>
+                            <span class="counter-value">$<span id="live-counter">1,247.83</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="container">
+                <h2>Revolutionary Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Zero Gas Fees</h3>
+                        <p>Gasless payments through NitroLite state channels</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Real-time Streaming</h3>
+                        <p>Payments stream by the second with instant settlement</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3>Cross-chain Native</h3>
+                        <p>Multi-chain treasury and payment support</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔍</div>
+                        <h3>Transparent & Trustless</h3>
+                        <p>All transactions verifiable on blockchain</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section class="technology">
+            <div class="container">
+                <h2>Powered by NitroLite Protocol (ERC-7824)</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <h4>State Channels</h4>
+                        <p>Instant off-chain transactions with on-chain security</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Cross-chain Bridge</h4>
+                        <p>Seamless asset transfers across 12 blockchains</p>
+                    </div>
+                    <div class="tech-item">
+                        <h4>Smart Contracts</h4>
+                        <p>Automated payroll logic with trustless execution</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2>Choose Your Plan</h2>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Free</h3>
+                        <div class="price">$0<span>/month</span></div>
+                        <ul class="features-list">
+                            <li>Up to 10 contributors</li>
+                            <li>$5,000 monthly volume</li>
+                            <li>Basic streaming</li>
+                            <li>Single chain</li>
+                            <li>Community support</li>
+                        </ul>
+                        <button class="btn btn--outline btn--full-width">Get Started</button>
+                    </div>
+                    <div class="pricing-card featured">
+                        <h3>Startup</h3>
+                        <div class="price">$49<span>/month</span></div>
+                        <ul class="features-list">
+                            <li>Up to 50 contributors</li>
+                            <li>$25,000 monthly volume</li>
+                            <li>Multi-chain support</li>
+                            <li>Analytics dashboard</li>
+                            <li>Email support</li>
+                            <li>Role management</li>
+                        </ul>
+                        <button class="btn btn--primary btn--full-width">Start Free Trial</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Professional</h3>
+                        <div class="price">$149<span>/month</span></div>
+                        <ul class="features-list">
+                            <li>Up to 200 contributors</li>
+                            <li>$100,000 monthly volume</li>
+                            <li>Advanced analytics</li>
+                            <li>Custom integrations</li>
+                            <li>Priority support</li>
+                            <li>Compliance tools</li>
+                        </ul>
+                        <button class="btn btn--outline btn--full-width">Contact Sales</button>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <div class="price">$499<span>/month</span></div>
+                        <ul class="features-list">
+                            <li>Up to 1000 contributors</li>
+                            <li>$500,000 monthly volume</li>
+                            <li>White-label solution</li>
+                            <li>Dedicated support</li>
+                            <li>SLA guarantees</li>
+                            <li>Custom development</li>
+                        </ul>
+                        <button class="btn btn--primary btn--full-width">Contact Sales</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="statistics">
+            <div class="container">
+                <h2>Platform Statistics</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">$45.2M</div>
+                        <div class="stat-label">Total Processed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15,000+</div>
+                        <div class="stat-label">Active Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">Supported Chains</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Wallet Connection Modal -->
+    <div class="modal hidden wallet-modal">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <h3>Connect Your Wallet</h3>
+                <p>Choose your preferred wallet to get started</p>
+                <div class="wallet-options">
+                    <button class="wallet-option" data-wallet="metamask">
+                        <span>🦊</span>
+                        <div>
+                            <strong>MetaMask</strong>
+                            <small>Connect using browser wallet</small>
+                        </div>
+                    </button>
+                    <button class="wallet-option" data-wallet="walletconnect">
+                        <span>📱</span>
+                        <div>
+                            <strong>WalletConnect</strong>
+                            <small>Connect using mobile wallet</small>
+                        </div>
+                    </button>
+                    <button class="wallet-option" data-wallet="coinbase">
+                        <span>🏦</span>
+                        <div>
+                            <strong>Coinbase Wallet</strong>
+                            <small>Connect using Coinbase</small>
+                        </div>
+                    </button>
+                </div>
+                <button class="btn btn--outline close-modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- User Type Selection -->
+    <div class="modal hidden user-type-modal">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <h3>Select Your Role</h3>
+                <p>Choose how you'll be using Web3 SmartPay</p>
+                <div class="user-type-options">
+                    <button class="user-type-option" data-type="dao">
+                        <div class="user-type-icon">🏢</div>
+                        <h4>DAO / Employer</h4>
+                        <p>Manage payroll, stream payments to contributors, and track treasury</p>
+                    </button>
+                    <button class="user-type-option" data-type="contributor">
+                        <div class="user-type-icon">👤</div>
+                        <h4>Contributor / Freelancer</h4>
+                        <p>Receive real-time payments, track earnings, and manage your income</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Setup Modal -->
+    <div class="modal hidden profile-modal">
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <h3>Complete Your Profile</h3>
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label class="form-label">Organization/Name</label>
+                        <input type="text" class="form-control" id="profile-name" placeholder="Enter your name or organization">
+                    </div>
+                    <div class="form-group dao-fields">
+                        <label class="form-label">Organization Type</label>
+                        <select class="form-control" id="org-type">
+                            <option value="defi">DeFi Protocol</option>
+                            <option value="gaming">GameFi Studio</option>
+                            <option value="dao">DAO</option>
+                            <option value="startup">Web3 Startup</option>
+                        </select>
+                    </div>
+                    <div class="form-group contributor-fields">
+                        <label class="form-label">Your Role</label>
+                        <select class="form-control" id="contributor-role">
+                            <option value="developer">Smart Contract Developer</option>
+                            <option value="designer">UI/UX Designer</option>
+                            <option value="manager">Community Manager</option>
+                            <option value="marketing">Marketing Specialist</option>
+                            <option value="writer">Technical Writer</option>
+                        </select>
+                    </div>
+                    <div class="form-group contributor-fields">
+                        <label class="form-label">Hourly Rate (USD)</label>
+                        <input type="number" class="form-control" id="hourly-rate" placeholder="50">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary btn--full-width">Complete Setup</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAO Dashboard -->
+    <div class="dashboard dao-dashboard hidden">
+        <nav class="dashboard-nav">
+            <div class="nav-brand">
+                <h3>🏢 DAO Dashboard</h3>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-item active" data-section="overview">Overview</button>
+                <button class="nav-item" data-section="payroll">Payroll</button>
+                <button class="nav-item" data-section="contributors">Contributors</button>
+                <button class="nav-item" data-section="analytics">Analytics</button>
+                <button class="theme-toggle">🌙</button>
+                <button class="btn btn--outline btn--sm logout-btn">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Overview Section -->
+        <div class="dashboard-section active" data-section="overview">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Treasury Overview</h2>
+                    <div class="header-actions">
+                        <button class="btn btn--primary">Add Funds</button>
+                        <button class="btn btn--outline">Withdraw</button>
+                    </div>
+                </div>
+
+                <div class="treasury-cards">
+                    <div class="treasury-card">
+                        <h4>Total Balance</h4>
+                        <div class="balance-amount">$247,563.21</div>
+                        <div class="balance-change positive">+5.2% this month</div>
+                    </div>
+                    <div class="treasury-card">
+                        <h4>Active Streams</h4>
+                        <div class="balance-amount">12</div>
+                        <div class="balance-change">Contributors receiving payments</div>
+                    </div>
+                    <div class="treasury-card">
+                        <h4>Monthly Outflow</h4>
+                        <div class="balance-amount">$89,240</div>
+                        <div class="balance-change">Across all payment streams</div>
+                    </div>
+                </div>
+
+                <div class="chain-balances">
+                    <h3>Multi-chain Balances</h3>
+                    <div class="chain-grid">
+                        <div class="chain-item">
+                            <div class="chain-info">
+                                <div class="chain-icon eth">ETH</div>
+                                <div class="chain-details">
+                                    <strong>Ethereum</strong>
+                                    <small>45.7 ETH</small>
+                                </div>
+                            </div>
+                            <div class="chain-balance">$126,439.20</div>
+                        </div>
+                        <div class="chain-item">
+                            <div class="chain-info">
+                                <div class="chain-icon matic">MATIC</div>
+                                <div class="chain-details">
+                                    <strong>Polygon</strong>
+                                    <small>89,342 MATIC</small>
+                                </div>
+                            </div>
+                            <div class="chain-balance">$78,921.45</div>
+                        </div>
+                        <div class="chain-item">
+                            <div class="chain-info">
+                                <div class="chain-icon arb">ARB</div>
+                                <div class="chain-details">
+                                    <strong>Arbitrum</strong>
+                                    <small>234.1 ETH</small>
+                                </div>
+                            </div>
+                            <div class="chain-balance">$42,202.56</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gas-savings-widget">
+                    <h3>Gas Savings Comparison</h3>
+                    <div class="savings-comparison">
+                        <div class="savings-item traditional">
+                            <h4>Traditional Payroll</h4>
+                            <div class="cost">$2,847</div>
+                            <small>Monthly gas fees</small>
+                        </div>
+                        <div class="savings-arrow">→</div>
+                        <div class="savings-item smartpay">
+                            <h4>Web3 SmartPay</h4>
+                            <div class="cost">$5.70</div>
+                            <small>Monthly fees</small>
+                        </div>
+                        <div class="savings-result">
+                            <strong>99.8% Savings!</strong>
+                            <small>$2,841.30 saved this month</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payroll Section -->
+        <div class="dashboard-section" data-section="payroll">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Payroll Management</h2>
+                    <button class="btn btn--primary">New Payment Stream</button>
+                </div>
+
+                <div class="payroll-controls">
+                    <div class="control-group">
+                        <h4>Master Controls</h4>
+                        <div class="controls-grid">
+                            <button class="control-btn active" id="start-all-streams">
+                                <span class="control-icon">▶️</span>
+                                <div>
+                                    <strong>Start All Streams</strong>
+                                    <small>Begin all active payments</small>
+                                </div>
+                            </button>
+                            <button class="control-btn" id="pause-all-streams">
+                                <span class="control-icon">⏸️</span>
+                                <div>
+                                    <strong>Pause All Streams</strong>
+                                    <small>Temporarily stop payments</small>
+                                </div>
+                            </button>
+                            <button class="control-btn" id="adjust-rates">
+                                <span class="control-icon">⚙️</span>
+                                <div>
+                                    <strong>Adjust Rates</strong>
+                                    <small>Modify payment rates</small>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-streams">
+                    <h3>Active Payment Streams</h3>
+                    <div class="streams-list">
+                        <div class="stream-item active-stream">
+                            <div class="stream-info">
+                                <div class="contributor-avatar">AC</div>
+                                <div class="contributor-details">
+                                    <strong>Alice Chen</strong>
+                                    <small>Smart Contract Developer</small>
+                                </div>
+                            </div>
+                            <div class="stream-rate">$85/hour</div>
+                            <div class="stream-status streaming">
+                                <div class="status-indicator active"></div>
+                                <span>Streaming</span>
+                            </div>
+                            <div class="stream-controls">
+                                <button class="btn btn--sm btn--outline">Pause</button>
+                                <button class="btn btn--sm btn--primary">Adjust</button>
+                            </div>
+                        </div>
+                        <div class="stream-item active-stream">
+                            <div class="stream-info">
+                                <div class="contributor-avatar">BM</div>
+                                <div class="contributor-details">
+                                    <strong>Bob Martinez</strong>
+                                    <small>UI/UX Designer</small>
+                                </div>
+                            </div>
+                            <div class="stream-rate">$65/hour</div>
+                            <div class="stream-status streaming">
+                                <div class="status-indicator active"></div>
+                                <span>Streaming</span>
+                            </div>
+                            <div class="stream-controls">
+                                <button class="btn btn--sm btn--outline">Pause</button>
+                                <button class="btn btn--sm btn--primary">Adjust</button>
+                            </div>
+                        </div>
+                        <div class="stream-item">
+                            <div class="stream-info">
+                                <div class="contributor-avatar">CK</div>
+                                <div class="contributor-details">
+                                    <strong>Carol Kim</strong>
+                                    <small>Community Manager</small>
+                                </div>
+                            </div>
+                            <div class="stream-rate">$45/hour</div>
+                            <div class="stream-status paused">
+                                <div class="status-indicator"></div>
+                                <span>Paused</span>
+                            </div>
+                            <div class="stream-controls">
+                                <button class="btn btn--sm btn--primary">Start</button>
+                                <button class="btn btn--sm btn--outline">Adjust</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contributors Section -->
+        <div class="dashboard-section" data-section="contributors">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contributor Management</h2>
+                    <button class="btn btn--primary">Invite Contributor</button>
+                </div>
+
+                <div class="contributors-grid">
+                    <div class="contributor-card">
+                        <div class="contributor-header">
+                            <div class="contributor-avatar">AC</div>
+                            <div class="contributor-info">
+                                <h4>Alice Chen</h4>
+                                <p>Smart Contract Developer</p>
+                            </div>
+                            <div class="contributor-status active">Active</div>
+                        </div>
+                        <div class="contributor-stats">
+                            <div class="stat">
+                                <label>Total Earned</label>
+                                <value>$12,450</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hours This Month</label>
+                                <value>120h</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hourly Rate</label>
+                                <value>$85</value>
+                            </div>
+                        </div>
+                        <div class="contributor-actions">
+                            <button class="btn btn--sm btn--outline">View Profile</button>
+                            <button class="btn btn--sm btn--primary">Adjust Rate</button>
+                        </div>
+                    </div>
+                    <div class="contributor-card">
+                        <div class="contributor-header">
+                            <div class="contributor-avatar">BM</div>
+                            <div class="contributor-info">
+                                <h4>Bob Martinez</h4>
+                                <p>UI/UX Designer</p>
+                            </div>
+                            <div class="contributor-status active">Active</div>
+                        </div>
+                        <div class="contributor-stats">
+                            <div class="stat">
+                                <label>Total Earned</label>
+                                <value>$8,930</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hours This Month</label>
+                                <value>95h</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hourly Rate</label>
+                                <value>$65</value>
+                            </div>
+                        </div>
+                        <div class="contributor-actions">
+                            <button class="btn btn--sm btn--outline">View Profile</button>
+                            <button class="btn btn--sm btn--primary">Adjust Rate</button>
+                        </div>
+                    </div>
+                    <div class="contributor-card">
+                        <div class="contributor-header">
+                            <div class="contributor-avatar">CK</div>
+                            <div class="contributor-info">
+                                <h4>Carol Kim</h4>
+                                <p>Community Manager</p>
+                            </div>
+                            <div class="contributor-status inactive">Inactive</div>
+                        </div>
+                        <div class="contributor-stats">
+                            <div class="stat">
+                                <label>Total Earned</label>
+                                <value>$5,670</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hours This Month</label>
+                                <value>80h</value>
+                            </div>
+                            <div class="stat">
+                                <label>Hourly Rate</label>
+                                <value>$45</value>
+                            </div>
+                        </div>
+                        <div class="contributor-actions">
+                            <button class="btn btn--sm btn--outline">View Profile</button>
+                            <button class="btn btn--sm btn--primary">Reactivate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Section -->
+        <div class="dashboard-section" data-section="analytics">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Analytics Dashboard</h2>
+                    <div class="time-filter">
+                        <button class="btn btn--sm btn--outline active">7D</button>
+                        <button class="btn btn--sm btn--outline">30D</button>
+                        <button class="btn btn--sm btn--outline">90D</button>
+                    </div>
+                </div>
+
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h4>Payment Volume Trend</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="volumeChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <h4>Contributor Performance</h4>
+                        <div class="chart-container" style="position: relative; height: 300px;">
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h4>Transaction Throughput</h4>
+                        <div class="metric-value">10,247 TPS</div>
+                        <div class="metric-change positive">+12% from last month</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Cross-chain Transactions</h4>
+                        <div class="metric-value">89.2%</div>
+                        <div class="metric-change positive">Multi-chain usage</div>
+                    </div>
+                    <div class="metric-card">
+                        <h4>Settlement Time</h4>
+                        <div class="metric-value">0.8s</div>
+                        <div class="metric-change positive">Average settlement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contributor Dashboard -->
+    <div class="dashboard contributor-dashboard hidden">
+        <nav class="dashboard-nav">
+            <div class="nav-brand">
+                <h3>👤 Contributor Dashboard</h3>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-item active" data-section="earnings">Earnings</button>
+                <button class="nav-item" data-section="history">History</button>
+                <button class="nav-item" data-section="performance">Performance</button>
+                <button class="nav-item" data-section="settings">Settings</button>
+                <button class="theme-toggle">🌙</button>
+                <button class="btn btn--outline btn--sm logout-btn">Logout</button>
+            </div>
+        </nav>
+
+        <!-- Earnings Section -->
+        <div class="dashboard-section active" data-section="earnings">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Real-time Earnings</h2>
+                    <div class="streaming-status active">
+                        <div class="status-dot"></div>
+                        <span>Payment streaming active</span>
+                    </div>
+                </div>
+
+                <div class="earnings-overview">
+                    <div class="earnings-card main">
+                        <h4>Current Balance</h4>
+                        <div class="balance-amount live-balance">$<span id="contributor-balance">1,247.83</span></div>
+                        <div class="balance-streaming">
+                            <span class="streaming-indicator">📈</span>
+                            <span>+$<span id="streaming-rate">1.42</span>/min</span>
+                        </div>
+                        <div class="balance-actions">
+                            <button class="btn btn--primary">Withdraw</button>
+                            <button class="btn btn--outline">View Details</button>
+                        </div>
+                    </div>
+                    <div class="earnings-card">
+                        <h4>This Month</h4>
+                        <div class="balance-amount">$8,947.52</div>
+                        <div class="balance-change positive">+23% from last month</div>
+                    </div>
+                    <div class="earnings-card">
+                        <h4>Total Earned</h4>
+                        <div class="balance-amount">$45,623.89</div>
+                        <div class="balance-change">Lifetime earnings</div>
+                    </div>
+                </div>
+
+                <div class="streaming-visualization">
+                    <h3>Live Payment Stream</h3>
+                    <div class="stream-visual">
+                        <div class="stream-source">DAO Treasury</div>
+                        <div class="stream-flow">
+                            <div class="flow-particles">
+                                <span class="particle">💰</span>
+                                <span class="particle">💰</span>
+                                <span class="particle">💰</span>
+                            </div>
+                        </div>
+                        <div class="stream-destination">Your Wallet</div>
+                    </div>
+                    <div class="stream-details">
+                        <div class="detail-item">
+                            <label>Hourly Rate:</label>
+                            <value>$85.00</value>
+                        </div>
+                        <div class="detail-item">
+                            <label>Time Worked Today:</label>
+                            <value><span id="time-worked">6h 23m</span></value>
+                        </div>
+                        <div class="detail-item">
+                            <label>Earned Today:</label>
+                            <value>$<span id="earned-today">543.25</span></value>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="actions-grid">
+                        <button class="action-btn">
+                            <span class="action-icon">⏰</span>
+                            <div>
+                                <strong>Log Time</strong>
+                                <small>Start/stop work tracking</small>
+                            </div>
+                        </button>
+                        <button class="action-btn">
+                            <span class="action-icon">💼</span>
+                            <div>
+                                <strong>Submit Invoice</strong>
+                                <small>Create payment request</small>
+                            </div>
+                        </button>
+                        <button class="action-btn">
+                            <span class="action-icon">📊</span>
+                            <div>
+                                <strong>View Report</strong>
+                                <small>Generate earnings report</small>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- History Section -->
+        <div class="dashboard-section" data-section="history">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Payment History</h2>
+                    <div class="header-filters">
+                        <select class="form-control">
+                            <option>All Chains</option>
+                            <option>Ethereum</option>
+                            <option>Polygon</option>
+                            <option>Arbitrum</option>
+                        </select>
+                        <button class="btn btn--outline">Export</button>
+                    </div>
+                </div>
+
+                <div class="transaction-list">
+                    <div class="transaction-item">
+                        <div class="tx-info">
+                            <div class="tx-type">Streaming Payment</div>
+                            <div class="tx-time">2 hours ago</div>
+                        </div>
+                        <div class="tx-details">
+                            <div class="tx-amount">+$170.00</div>
+                            <div class="tx-status completed">Completed</div>
+                        </div>
+                        <div class="tx-chain eth">ETH</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="tx-info">
+                            <div class="tx-type">Bonus Payment</div>
+                            <div class="tx-time">1 day ago</div>
+                        </div>
+                        <div class="tx-details">
+                            <div class="tx-amount">+$500.00</div>
+                            <div class="tx-status completed">Completed</div>
+                        </div>
+                        <div class="tx-chain matic">MATIC</div>
+                    </div>
+                    <div class="transaction-item">
+                        <div class="tx-info">
+                            <div class="tx-type">Streaming Payment</div>
+                            <div class="tx-time">2 days ago</div>
+                        </div>
+                        <div class="tx-details">
+                            <div class="tx-amount">+$680.00</div>
+                            <div class="tx-status completed">Completed</div>
+                        </div>
+                        <div class="tx-chain arb">ARB</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Section -->
+        <div class="dashboard-section" data-section="performance">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Performance Metrics</h2>
+                </div>
+
+                <div class="performance-grid">
+                    <div class="performance-card">
+                        <h4>Monthly Earnings Trend</h4>
+                        <div class="chart-container" style="position: relative; height: 250px;">
+                            <canvas id="earningsChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="performance-card">
+                        <h4>Work Distribution</h4>
+                        <div class="chart-container" style="position: relative; height: 250px;">
+                            <canvas id="distributionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="milestones">
+                    <h3>Achievements & Milestones</h3>
+                    <div class="milestones-list">
+                        <div class="milestone-item completed">
+                            <div class="milestone-icon">🏆</div>
+                            <div class="milestone-info">
+                                <h4>$10K Earned</h4>
+                                <p>Reached $10,000 in total earnings</p>
+                                <small>Completed 2 months ago</small>
+                            </div>
+                        </div>
+                        <div class="milestone-item completed">
+                            <div class="milestone-icon">⭐</div>
+                            <div class="milestone-info">
+                                <h4>100 Hours Streamed</h4>
+                                <p>Completed 100 hours of streamed work</p>
+                                <small>Completed 1 month ago</small>
+                            </div>
+                        </div>
+                        <div class="milestone-item in-progress">
+                            <div class="milestone-icon">🎯</div>
+                            <div class="milestone-info">
+                                <h4>$50K Club</h4>
+                                <p>Reach $50,000 in total earnings</p>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 91%"></div>
+                                </div>
+                                <small>91% complete</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Settings Section -->
+        <div class="dashboard-section" data-section="settings">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Account Settings</h2>
+                </div>
+
+                <div class="settings-sections">
+                    <div class="settings-card">
+                        <h4>Profile Information</h4>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" value="Alice Chen">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Professional Role</label>
+                                <input type="text" class="form-control" value="Smart Contract Developer">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Hourly Rate (USD)</label>
+                                <input type="number" class="form-control" value="85">
+                            </div>
+                            <button type="submit" class="btn btn--primary">Update Profile</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-card">
+                        <h4>Payment Preferences</h4>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label class="form-label">Preferred Chain</label>
+                                <select class="form-control">
+                                    <option value="ethereum">Ethereum</option>
+                                    <option value="polygon" selected>Polygon</option>
+                                    <option value="arbitrum">Arbitrum</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Auto-withdraw Threshold</label>
+                                <input type="number" class="form-control" value="1000" placeholder="Amount in USD">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <input type="checkbox" checked> Enable real-time notifications
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn--primary">Save Preferences</button>
+                        </form>
+                    </div>
+
+                    <div class="settings-card">
+                        <h4>Tax Reporting</h4>
+                        <div class="tax-tools">
+                            <p>Generate tax reports for your earnings across all chains.</p>
+                            <div class="form-group">
+                                <label class="form-label">Tax Year</label>
+                                <select class="form-control">
+                                    <option value="2025">2025</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2023">2023</option>
+                                </select>
+                            </div>
+                            <div class="tax-actions">
+                                <button class="btn btn--outline">Download 1099</button>
+                                <button class="btn btn--primary">Generate Report</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
